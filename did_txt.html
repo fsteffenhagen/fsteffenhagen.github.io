@@ -1,0 +1,35 @@
+By keeping track of the things you have worked on you'll more likely remember what you did  and it is a great way to keep track of progress. It can also help tracking distractions and other things that hold you back from working on important stuff. This page describes a neat simple idea of using a simple text file to hold timestamped entries. The original idea I found  here.
+Goals:
+
+    keep a timestamped progress log
+    simple read/write using the terminal
+    no fancy GUI, no cloud stuff, just simple and distraction free
+
+Idea: Keep a simple text file did.txt
+
+felix@xpressd ~> cat ~/did.txt 
+
+2018-09-12 09:01:27: Read about how to use a did.txt log 
+
+2018-09-12 10:06:08: Updated my homepage
+
+2018-09-12 11:30:08: Team meeting
+
+2018-09-12 12:30:56: Lunch 
+
+2018-09-12 13:37:08: Fixed critical api bug
+
+Now we can use an editor to add a new line whenever we achieved something. But adding that timestamp can be quite tedious. Powerful Vim can help out with that! Vim allows to specify editing commands on the command-line that are being run after opening the file. For example, running the following goes to the end of the file, reads the current date and lastly, enters insert mode to append at the end of the line.
+
+vim +'normal G' +'r!date +"\%F \%H:\%M:\%S: "' +'normal A' ~/did.txt
+
+Define aliases for reading/writing
+
+    did: to open the did.txt file with a pre-populated timestamp
+    did_today: grep todays entries from the did.txt file
+
+# Put this in your .bash_profile
+
+alias did=vim +'normal G' +'r!date +"\%F \%H:\%M:\%S: "' +'normal A' ~/did.txt
+
+alias did_today=grep $(date +%F) ~/did.txt

@@ -6,10 +6,29 @@
     <description>Recent content on Random Tech Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 23 Dec 2018 01:01:18 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Dec 2018 02:50:19 -0800</lastBuildDate>
     
 	<atom:link href="https://fsteffenhagen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me</title>
+      <link>https://fsteffenhagen.github.io/about-me/</link>
+      <pubDate>Sun, 23 Dec 2018 02:50:19 -0800</pubDate>
+      
+      <guid>https://fsteffenhagen.github.io/about-me/</guid>
+      <description>Hi, my name is Felix Steffenhagen and I welcome you to my little web space. I&amp;rsquo;m interested in a lot of things but unfortunately there&amp;rsquo;s too little time to follow everything.
+Mostly I&amp;rsquo;m interested in everything around Linux, Python, Coding, Software Engineering, command-line tools, Data Science, Photography, Reading, Playing Musical Instruments, Watches, Retro Games.</description>
+    </item>
+    
+    <item>
+      <title>Tech Stack</title>
+      <link>https://fsteffenhagen.github.io/tech-stack/</link>
+      <pubDate>Sun, 23 Dec 2018 02:34:55 -0800</pubDate>
+      
+      <guid>https://fsteffenhagen.github.io/tech-stack/</guid>
+      <description> Tech and tools I use mostly OS  Ubuntu Linux  Programming Languages  awk Bash Golang Python  Web  Firefox: My default Browser Hugo: Static Site Generator  Command-line Tools  jq mtr tmux mycli  Coding tools  git PyCharm  Misc Tools  keepassx: Password Management  Websites I browse daily/weekly  https://blog.fefe.de https://news.ycombinator.com  </description>
+    </item>
     
     <item>
       <title>Did Txt</title>

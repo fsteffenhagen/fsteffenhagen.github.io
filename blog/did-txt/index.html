@@ -2,7 +2,6 @@
 <html lang="en-US">
 
 <head>
-	<meta name="generator" content="Hugo 0.40.1" />
 <meta charset="utf-8">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -15,24 +14,24 @@
 <meta property="og:site_name" content="Random Tech Stuff" />
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fsteffenhagen.github.io/" />
-<meta property="og:title" content="Random Tech Stuff" />
-<meta property="twitter:title" content="Random Tech Stuff">
+<meta property="og:url" content="https://fsteffenhagen.github.io/blog/did-txt/" />
+<meta property="og:title" content="Did Txt" />
+<meta property="twitter:title" content="Did Txt">
 
     <meta property="og:image" content="https://fsteffenhagen.github.io/img/banner.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:image" content="https://fsteffenhagen.github.io/img/banner.png">
 
-<meta property="og:description" content="My memory dump of interesting tech things I stumbled upon">
-<meta property="twitter:description" content="My memory dump of interesting tech things I stumbled upon">
+<meta property="og:description" content="">
+<meta property="twitter:description" content="">
 
 <title>
 
 
-    Random Tech Stuff
+     Random Tech Stuff - Did Txt 
 
 </title>
-<link rel="canonical" href="https://fsteffenhagen.github.io/">
+<link rel="canonical" href="https://fsteffenhagen.github.io/blog/did-txt/">
 
 
 <style media="screen">
@@ -985,8 +984,6 @@ margin-left: -4%;
 
 
 
-  <link href="https://fsteffenhagen.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Tech Stuff" />
-
 
 </head>
 
@@ -994,7 +991,7 @@ margin-left: -4%;
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1019,20 +1016,100 @@ margin-left: -4%;
     </div>
 </div>
 
-<div class="main column">
+
+
+
+
+<div class="main post non-narrow zero-top-spacing column">
     <div class="container">
         <div class="content">
-            
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
 
-            
+    
+    Draft::Did Txt
+    
 
-            <div class="best-posts">
-            
-            
+</div>
+
+                </div>
+                <div class="meta">
+                    <div class="date" title="Sun Dec 23 2018 01:01:18 PST">Dec 23, 2018</div>
+                    
+                        
+                    
+                    
+                    <div class="reading-time middot">1 minute read</div>
+                    
+                    <div class="tags">
+                        <ul>
+                          
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                          
+                          
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="markdown">
+                
+    
+    
+
+<h1 id="generate-a-minimalist-micro-journal-using-vim">Generate a minimalist micro journal using vim</h1>
+
+<h2 id="basic-idea">Basic Idea</h2>
+
+<p>With all the distractions I&rsquo;m facing in the office I sometimes find it hard to keep track
+of what I was doing. Some troubleshooting here, a bit of coding there, meetings, etc.
+At the end of the day it&rsquo;s nice to have a look back and track your progress on ongoing things.</p>
+
+<p>This little recipe achieves just that and it is as simple as it gets.
+The basic idea: just keep a simple text file that has time stamped line entrye like you see in log files</p>
+
+<pre><code>did.txt
+2018-12-06 08:00:10: Weekly meeting
+2018-12-06 10:45:31: Fixed important service on mission critical host 
+2018-12-06 11:00:10: Another meeting 
+2018-12-06 12:00:40: Lunch 
+2018-12-06 12:45:35: Updated runtime of slow script 
+...
+</code></pre>
+
+<p>Now it&rsquo;s easy to write things down like that but it&rsquo;s cumbersome to open the file in your editor and manually add the timestamp.
+For this, I created a little vimscript alias that does exactly that for me.</p>
+
+<pre><code>function did
+    vim +'normal G' +'r!date +&quot;\%Y-\%m-\%d \%H:\%M:\%S:  &quot;' +'normal! A' ~/.did.txt
+end
+</code></pre>
+
+
+            </div>
+            
+            
+            <br>
+            <div class="navigation">
+                
+                <div style="width: 100%;"></div>
+                
+            </div>
+            
+            
+
+            
+
+            
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 

@@ -9,7 +9,7 @@
 <meta name="description" content="My memory dump of interesting tech things I stumbled upon">
 
 
-    <meta property="twitter:site" content="@__fst__">
+    <meta property="twitter:site" content="@@__fst">
 
 <meta property="og:site_name" content="Random Tech Stuff" />
 <meta property="og:locale" content="en-US" />
@@ -1040,7 +1040,7 @@ margin-left: -4%;
                         
                     
                     
-                    <div class="reading-time middot">1 minute read</div>
+                    <div class="reading-time middot">2 minute read</div>
                     
                     <div class="tags">
                         <ul>
@@ -1066,12 +1066,13 @@ margin-left: -4%;
 
 <p>With all the distractions I&rsquo;m facing in the office I sometimes find it hard to keep track
 of what I was doing. Some troubleshooting here, a bit of coding there, meetings, etc.
-At the end of the day it&rsquo;s nice to have a look back and track your progress on ongoing things.</p>
+Some days are just context switching from one task to the next.
+At the end of the day it&rsquo;s still nice to turn back and track your progress and to have a reference point to start off next day.</p>
 
 <p>This little recipe achieves just that and it is as simple as it gets.
-The basic idea: just keep a simple text file that has time stamped line entrye like you see in log files</p>
+The basic idea: just keep a simple text file that has time stamped line entries like you see in log files</p>
 
-<pre><code>did.txt
+<pre><code># did.txt
 2018-12-06 08:00:10: Weekly meeting
 2018-12-06 10:45:31: Fixed important service on mission critical host 
 2018-12-06 11:00:10: Another meeting 
@@ -1081,11 +1082,20 @@ The basic idea: just keep a simple text file that has time stamped line entrye l
 </code></pre>
 
 <p>Now it&rsquo;s easy to write things down like that but it&rsquo;s cumbersome to open the file in your editor and manually add the timestamp.
-For this, I created a little vimscript alias that does exactly that for me.</p>
+For this, I created a little alias that calls vim with a command-line vimscript:</p>
 
-<pre><code>function did
-    vim +'normal G' +'r!date +&quot;\%Y-\%m-\%d \%H:\%M:\%S:  &quot;' +'normal! A' ~/.did.txt
-end
+<pre><code>alias did=vim +'normal G' +'r!date +&quot;\%Y-\%m-\%d \%H:\%M:\%S:  &quot;' +'normal! A' ~/.did.txt
+</code></pre>
+
+<p>Now when I run &lsquo;did&rsquo; it:
+1. opens my did file
+2. goes to the end of the file and appends a line with current date and time</p>
+
+<p>Et Voila. Now just add your comment and exit vim.</p>
+
+<p>If you want to pimp it up a bit, you can create an alias to show you what you did today:</p>
+
+<pre><code>alias did_today=grep (date +%F) ~/.did.txt
 </code></pre>
 
 
@@ -1139,7 +1149,7 @@ end
         
 
         
-            <a href="https://twitter.com/__fst__" rel=me target="_blank">
+            <a href="https://twitter.com/@__fst" rel=me target="_blank">
                 <img class="icon" src="https://fsteffenhagen.github.io/img/twitter.svg" alt="twitter" />
             </a>
         

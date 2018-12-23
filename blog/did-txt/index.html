@@ -1028,7 +1028,7 @@ margin-left: -4%;
                     <div class="page-heading">
 
     
-    Draft::Did Txt
+    Did Txt
     
 
 </div>
@@ -1060,9 +1060,7 @@ margin-left: -4%;
     
     
 
-<h1 id="generate-a-minimalist-micro-journal-using-vim">Generate a minimalist micro journal using vim</h1>
-
-<h2 id="basic-idea">Basic Idea</h2>
+<h1 id="did-txt-generate-a-minimalist-micro-journal-using-vim">did.txt: Generate a minimalist micro journal using vim</h1>
 
 <p>With all the distractions I&rsquo;m facing in the office I sometimes find it hard to keep track
 of what I was doing. Some troubleshooting here, a bit of coding there, meetings, etc.
@@ -1087,11 +1085,15 @@ For this, I created a little alias that calls vim with a command-line vimscript:
 <pre><code>alias did=vim +'normal G' +'r!date +&quot;\%Y-\%m-\%d \%H:\%M:\%S:  &quot;' +'normal! A' ~/.did.txt
 </code></pre>
 
-<p>Now when I run &lsquo;did&rsquo; it:
-1. opens my did file
-2. goes to the end of the file and appends a line with current date and time</p>
+<p>Now when I run <code>did</code> it:</p>
 
-<p>Et Voila. Now just add your comment and exit vim.</p>
+<ol>
+<li>opens my did file in vim</li>
+<li>goes to the end of the file and appends a line with current date and time</li>
+</ol>
+
+<p>Now just add your comment and exit vim.
+That&rsquo;s all I need. No other tools involved other than a simple text editor.</p>
 
 <p>If you want to pimp it up a bit, you can create an alias to show you what you did today:</p>
 
